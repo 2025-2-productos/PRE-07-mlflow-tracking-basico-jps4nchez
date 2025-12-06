@@ -63,11 +63,7 @@ def main():
         ## Ya no se requiere la funcion save_model_if_better,
         ## ya que MLflow guarda en el experimento de Mlflow
         ## save_model_if_better(model, x_test, y_test)
-        mlflow.sklearn.log_model(
-            sk_model=model,
-            artifact_path="model",
-            input_example=x_train[:1],
-        )
+        mlflow.sklearn.log_model(sk_model=model, artifact_path="model")
 
 
 if __name__ == "__main__":
