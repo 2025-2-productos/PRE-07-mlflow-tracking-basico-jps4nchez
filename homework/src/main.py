@@ -16,6 +16,8 @@ RANDOM_STATE = 123456
 
 def main():
 
+    mlflow.set_tracking_uri("file:mlruns")
+    mlflow.set_experiment("wine_quality_experiment")
     args = parse_argument()
     model = select_model(args)
 
